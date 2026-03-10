@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 992px) {
+
+  .mt-lg-80{
+    margin-top: 80px !important;
+  }
+  .left-40 {
+    left: 40px;
+  }
+
+  /*高さ*/
+  .height-40-lg{
+   height: 40px !important;
+  }
+  .height-80-lg{
+   height: 80px !important;
+  }
+  .height-120-lg{
+   height: 120px !important;
+  }
+  .height-180-lg{
+   height: 180px !important;
+  }
+  .height-240-lg{
+  height: 240px;
+  }
+  .height-200-lg{
+  height: 200px;
+  }
+  .height-280-lg{
+  height: 280px;
+  }
+  .height-350-lg{
+  height: 350px;
+  }
+  .height-290-lg{
+  height: 290px;
+  }
+  .height-340-lg{
+    height: 340px;
+  }
+  .width-lg-70pr{
+    width: 70%;
+  }
+  .width-lg-50pr{
+    width: 50%;
+  }
+    .w-lg-100pr{
+    width: 100% !important;
+  }
+
+  .deco-img01 {
+  position: relative; /* 疑似要素の基準にする */
+  overflow: hidden;   /* はみ出し防止（必要なら） */
+}
+
+.deco-img01::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;   /* 下からの距離調整 */
+  right: 10px;    /* 右からの距離調整 */
+  width: 100px;    /* 画像サイズ調整 */
+  height: 100px;
+  background: url("../../../assets/img/s_deco01.png") no-repeat center/contain;
+  opacity: 0.8;   /* 少し透過させたい場合 */
+  pointer-events: none; /* クリック操作を邪魔しない */
+}
+
+.deco-img02 {
+  position: relative; /* 疑似要素の基準にする */
+  overflow: hidden;   /* はみ出し防止（必要なら） */
+}
+
+.deco-img02::after {
+  content: "";
+  position: absolute;
+  bottom: 165px;   /* 下からの距離調整 */
+  right: 10px;    /* 右からの距離調整 */
+  width: 100px;    /* 画像サイズ調整 */
+  height: 100px;
+  background: url("../../../assets/img/s_deco02.png") no-repeat center/contain;
+  opacity: 0.8;   /* 少し透過させたい場合 */
+  pointer-events: none; 
+  z-index: 5;
+}
+.deco-img03 {
+  position: relative; /* 疑似要素の基準にする */
+  overflow: hidden;   /* はみ出し防止（必要なら） */
+}
+
+.deco-img03::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;   /* 下からの距離調整 */
+  right: 10px;    /* 右からの距離調整 */
+  width: 100px;    /* 画像サイズ調整 */
+  height: 100px;
+  background: url("../../../assets/img/s_deco03.png") no-repeat center/contain;
+  opacity: 0.8;   /* 少し透過させたい場合 */
+  pointer-events: none; 
+  z-index: 5;
+}
+
+}
+
+
+
+
+
+@media screen and (min-width: 1017px) {
+
+}
+@media screen and (min-width: 1200px) {
+
+}
+@media screen and (min-width: 1400px) {
+}
+

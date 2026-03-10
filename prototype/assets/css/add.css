@@ -1,1 +1,25 @@
 /*# sourceMappingURL=add.css.map */
+
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    .bg-fv {
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+        height: 600px;
+        z-index: 0;
+        background-image: url(../../assets/img/t-fv.png);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .bg-fv {
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
+        height: 600px;
+        z-index: 0;
+        background-image: url(../../assets/img/t-fv.png);
+    }
+}

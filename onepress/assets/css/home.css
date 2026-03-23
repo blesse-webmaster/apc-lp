@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+/*------------------------------------------------------*/
+/*	home.css				*/
+/*							*/
+/*			'2021/04New			*/
+/*------------------------------------------------------*/
+
+/*
+	id="sec1Block"
+*/
+/*bg gradient*/
+/*
+@keyframes gradient {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
+*/
+.sec1Block h2{padding:8px;}
+.sec1Block p{margin-bottom:16px;}
+
+.initiatBlock{margin-bottom:16px;padding:14px;background-color:#755248;color:#fff;text-align:center;}
+.initiatBlock h3{margin-bottom:4px;color:#fff;text-decoration:underline;}
+
+/*	id="sec1Block"end	*/
+
+/*
+	id="sec3Block"
+*/
+
+.secHomeVoiceBlock{padding-top:32px;padding-bottom:32px;background-image: url(../images/tileGray2.png);background-repeat:repeat;}
+.voiceBlock{position:relative;padding:24px;background-color:#fcf7f6;}
+.secHomeVoiceBlock img{position:absolute;width:32px;top:-8px;left:-8px;}
+
+
+/*	id="sec3Block"end	*/
+
+/*----------------------*/
+/*	レスポンシブ	*/
+/*----------------------*/
+/*↓↓Mobile↓↓*/
+@media screen and (max-width: 480px) {
+
+
+}

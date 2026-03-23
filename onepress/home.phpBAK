@@ -1,0 +1,223 @@
+<?php
+/*
+Template Name:home
+ */
+
+get_header();
+
+$layout = onepress_get_layout();
+
+    /**
+     * @since 2.0.0
+     * @see onepress_display_page_title
+     */
+    do_action( 'onepress_page_before_content' );
+    ?>
+	<div id="content" class="site-content">
+        <?php onepress_breadcrumb(); ?>
+	<div id="content-inside" class="container <?php echo esc_attr( $layout ); ?>">
+
+		<div id="slideBlock" class="slideBlock">
+			<aside class="swiper-container marginBottom30">
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide s-fade-wrap" style="
+						background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/indexHead01.jpg?002');
+						background-size:cover;
+						background-position:center center;
+/*
+						background-repeat: no-repeat;
+						width: 1261px;
+						background-size:cover;
+						background-position: center center;"*/>
+
+
+						<!--コメントアウトでテキスト-->
+						<span class="s-fade-text">笑顔の絶えない みらい を</span>
+
+					</div>
+					<div class="swiper-slide" style="
+						background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/indexHead02.jpg?001');
+						background-size:cover;
+						background-position:center center;
+/*
+						background-repeat: no-repeat;
+						width: 1261px;
+						background-size: cover;
+						background-position: center center;"*/>
+						<!--コメントアウトでテキスト-->
+						<span class="s-fade-text">安全・安心な生活空間をお届けします</span>
+					</div>
+					<div class="swiper-slide" style="
+						background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/indexHead03.jpg?001');
+						background-size:cover;
+						background-position:center center;
+/*
+						background-repeat: no-repeat;
+						width: 1261px;
+						background-size: cover;
+						background-position: center center;"*/>
+						<!--コメントアウトでテキスト-->
+						<span class="s-fade-text">みなさまの暮らしによりそうサービスを提供</span>
+					</div>
+					<div class="swiper-slide" style="
+						background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/indexHead04.jpg?001');
+						background-size:cover;
+						background-position:center center;
+/*
+						background-repeat: no-repeat;
+						width: 1261px;
+						background-size: cover;
+						background-position: center center;"*/>
+						<!--コメントアウトでテキスト-->
+						<span class="s-fade-text">ずっと長いお付き合いに　みらい住電</span>
+					</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</aside>
+
+		</div>	<!--id="slideBlock"-->
+
+		<div id="primary" class="content-area contentBlock ">
+
+			<h2 class="h2Blue contentInnerBlock">安心して暮らせる未来を願って</h2>
+			<section id="sec1Block" class="sec1Block"><div class="contentInnerBlock2">
+
+				<div class=" bgWhite">
+					<p>私たちみらい住電の考え<br/>
+					もしあなたが100年住む家をつくるとしたらどのような家を想像しますか？<br/>
+					「安心」・「安全」・「快適」・「エネルギーの自給自足」・・・<br/>
+					お客様が、これからずっと住み続けたいと思えるお家をつくるお手伝いをしたいと思っています。</p>
+					<p class="fontL fontBrown fontBold">「みらい住電にお願いして本当に良かった！」</p>
+					<p>そう、おひとりでも多くの方に思っていただけるように。<br/>
+					私たちは幸せに暮らしていただけることを願って、今日も真摯に取り組んでまいります。</p>
+
+					<p class="alignRight">みらい住電社員一同</p>
+				</div>
+
+			</div></section>	<!--id="sec1Block"-->
+
+			<section id="sec2Block" class="sec2Block"><div class="contentInnerBlock">
+
+				<h2 class="h2Blue">リピーターの方やご紹介からのお客様が8割を占めています</h2>
+				<div class="lineBlock bgWhite shortWitdth">
+					<p>ご家族のカタチや生活スタイルは、ライフステージによって変化していきます。</p>
+					<p>みらい住電では、お客様からじっくりとお話しを伺い、本気で寄り添い、“理想の暮らし”をつくるお手伝いをしてまいりたいと考えております。</p>
+				</div>
+				<section>
+					<h3>施工事例.<span class="fontL">１</span></h3>
+					<div class="lineBlock flex_column bgLightBrown">
+						<div class="w70">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexCase01.png" alt="施工事例ビフォーアフター"></a>
+						</div>
+						<div class="w30">
+							<p>安全対策をして、屋根にソーラーパネル（太陽電池モジュール）を設置。配線なども目立たす美観を損ないません。発電した電気はIHクッキングヒーターやエコキュート、エアコンなどで利用できます。</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3>施工事例.<span class="fontL">２</span></h3>
+					<div class="lineBlock flex_column bgLightBrown">
+						<div class="w70">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexCase02.png" alt="施工事例ビフォーアフター"></a>
+						</div>
+						<div class="w30">
+							<p>太陽光発電とは太陽の光エネルギーを直接電気エネルギーに変換する太陽電池を利用した仕組みです。自然エネルギーのため、なくなる心配がなく、CO2を排出しないため、環境にも優しい再生可能エネルギーのひとつです。</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3>施工事例.<span class="fontL">３</span></h3>
+					<div class="lineBlock flex_column bgLightBrown">
+						<div class="w70">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexCase03.png" alt="施工事例ビフォーアフター"></a>
+						</div>
+						<div class="w30">
+							<p>家庭用蓄電池とは、充電して何度も使用できるリチウムイオン電池。太陽光発電で作った電気を蓄電池に溜めて、夜間に使用します。非常時にも必要な時にも使うことができます。すっきりとしたデザインで場所もとりません。</p>
+						</div>
+					</div>
+				</section>
+				<!-- 2021/05/30 Add Start -->
+				<section>
+					<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-fill"><a class="wp-block-button__link has-background" href="https://mirai-juden.biz/examples/#case" style="background-color:#755248">詳細はこちら</a></div>
+				</section>
+				<!-- 2021/05/30 Add End -->
+			</div></section>	<!--id="sec2Block"-->
+
+			<section id="sec3Block" class="secHomeVoiceBlock"><div class="contentInnerBlock">
+
+				<h2 class="h2Blue">お客様の声</h2>
+				<div class="lineBlock flex_column">
+					<div class="w50">
+						<div class="voiceBlock">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexClip.png" alt="施工後"></a>
+							<p>丁寧な対応で、地震の次の日などフォローがしっかりあり、感謝しています。相談など気軽に話が出来て良い。<br/>
+							これからもよろしくお願いします。</p>
+						</div>
+					</div>
+					<div class="w50">
+						<div class="voiceBlock">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexClip.png" alt="施工後"></a>
+							<p>設置した後、停電した時も蓄電池が作動して良かったと思いました。<br/>
+							担当の営業の方達はとても親切で、質問等にも分かりやすく説明してくださったので助かりました。</p>
+						</div>
+					</div>
+				</div>
+				<div class="lineBlock flex_column">
+					<div class="w50">
+						<div class="voiceBlock">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexClip.png" alt="施工後"></a>
+							<p>担当の方には何度も足を運んでいただきありがとうございました。<br/>
+							前々から家族で話していてそのままになっていた蓄電池設置に踏み切れるいい機会になったと思います。間もなく終了する買取り後、増々良かったと感じることと思います。</p>
+						</div>
+					</div>
+					<div class="w50">
+						<div class="voiceBlock">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexClip.png" alt="施工後"></a>
+							<p>災害や停電時のもしもの備えとして安心できています。<br/>
+							導入コストはかかるが長い目てみて、せっかく太陽光発電をしているので、合わせることにより、日中の電気代を下げられた結果、節約につながっています。中古の電気自動車を購入するキッカケになりました。</p>
+						</div>
+					</div>
+				</div>
+				<div class="lineBlock flex_column">
+					<div class="w50">
+						<div class="voiceBlock">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexClip.png" alt="施工後"></a>
+							<p>皆さん、テキパキと作業されていて良かったです。<br/>
+							工事後の説明も分かりやすかったです。</p>
+						</div>
+					</div>
+					<div class="w50">
+						<div class="voiceBlock">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/indexClip.png" alt="施工後"></a>
+							<p>設置前は家中の電気が付いていてもあまりきにしていなかったが、節電を心掛けるようになりました。</p>
+						</div>
+					</div>
+				</div>
+				<!-- 2021/05/30 Add Start -->
+				<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-background" href="https://mirai-juden.biz/examples/#voice" style="background-color:#755248">詳細はこちら</a></div>
+				<!-- 2021/05/30 Add End -->
+
+			</div></section>	<!--id="sec3Block"-->
+
+		</div><!-- class="contentBlock" -->
+
+            <?php if ( $layout != 'no-sidebar' ) { ?>
+                <?php get_sidebar(); ?>
+            <?php } ?>
+
+	</div><!--#content-inside -->
+	</div><!-- #content -->
+
+<?php get_footer(); ?>
+
+<!--call script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+<!--script src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper.js"></script-->
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/slideTxt.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/foot.js"></script>

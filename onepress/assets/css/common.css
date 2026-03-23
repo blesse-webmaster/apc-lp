@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+
+/*------------------------------------------------------*/
+/*	common.css				*/
+/*							*/
+/*			'2021/04New	*/
+/*------------------------------------------------------*/
+
+/*--------------*/
+/*	初期化	*/
+/*--------------*/
+ul{ list-style-type: none;margin:0;padding:0;}
+img{max-width:100%;}
+section{margin:0px;}
+/*--------------------------------------*/
+/*					*/
+/*	↓タグ共通↓			*/
+/*					*/
+/*--------------------------------------*/
+input[type="submit"]{background:#556dac;}
+
+/*
+.miraiTbl{width:100%;border-collapse:collapse;}
+.miraiTbl th{background-color:#ff3399;border:3px solid #fff;color:#fff;padding-top:10px;padding-bottom:10px;padding-right:5px;padding-left:5px;}
+.miraiTbl td{background-color:#ffeff7;border:3px solid #fff;padding-top:10px;padding-bottom:10px;padding-right:5px;padding-left:5px;}
+*/
+
+/*	↑タグ共通↑		*/
+/*--------------------------------------*/
+/*					*/
+/*	↓共通パーツ↓			*/
+/*					*/
+/*--------------------------------------*/
+.pcOn { display: block; }
+.mobileOn { display: none; }
+
+/*	↑共通パーツ↑		*/
+
+/*--------------------------------------*/
+/*					*/
+/*	↓width・block↓		*/
+/*					*/
+/*--------------------------------------*/
+
+.contentInnerBlock{margin-left:200px;margin-right:200px;}
+.contentInnerBlock2{margin-left:300px;margin-right:300px;}
+.shortWitdth{margin-left:100px;margin-right:100px;}
+.shortWitdth2{margin-left:300px;margin-right:300px;}
+
+.contentBlock h1,
+.contentBlock > section,
+.contentBlock > div
+{margin-bottom:50px;}
+
+.lineBlock,h2{margin-bottom:20px;}
+
+.flex_column,.flex_columnStatic{
+	display:-webkit-flex;display:-moz-flex;	display:-ms-flex;display:-o-flex;display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+
+.w60{width:58%;}
+.w40{width:40%;}
+.w70{width:68%;}
+.w30{width:30%;}
+.w80{width:78%;}
+.w20{width:20%;}
+.w50{width:48%;}
+
+.w50Static{width:48%;}
+
+/*	↑width↑		*/
+/*--------------------------------------*/
+/*					*/
+/*	↓フォントの共通↓		*/
+/*					*/
+/*--------------------------------------*/
+.fontL{font-size: 120%; }
+.fontM{font-size:100%; }
+.fontS{font-size: 80%;}
+.notes{ font-size: 80%;}
+
+.fontBlue{color:#556dac;}
+.fontBrown{color:#755248;}
+
+.fontBold { font-weight: bold ; }
+
+/*	↑フォントの共通↑		*/
+
+/*----------------------*/
+/*	枠 BG		*/
+/*----------------------*/
+
+.bgWhite{padding:20px;background-color:#fff;border-radius:16px;}
+.bgWhite h3,.footMaimBlock .bgWhite a{color:#755248;}
+.bgLightBrown{padding:20px;background-color:#fcf7f6;border-radius:16px;}
+.frmBrown{padding:20px;border:1px solid #755248;border-radius:16px;}
+
+
+/*----------------------*/
+/*	margin padding	*/
+/*----------------------*/
+
+.marginBottom0{margin-bottom:0px!important;}
+.marginBottom8{margin-bottom:8px;}
+.marginBottom16{margin-bottom:16px!important;}
+.marginBottom20{margin-bottom:20px;}
+.marginBottom32{margin-bottom:32px;}
+.marginBottom64{margin-bottom:64px;}
+.marginLeft16{margin-left:16px;}
+
+.alignCenter{ text-align: center; }
+.alignLeft{ text-align: left; }
+.alignRight{ text-align: right; }
+
+/*
+	h title
+*/
+h2{
+	padding-bottom:16px;
+	font-size:195%;color:#556dac;font-family :'M PLUS 1p','sans-serif',serif;font-weight:bold;
+	border-bottom:#556dac solid 1px;
+	text-align:center;
+}
+h2:before{content: '';display: inline-block;width:36px;height:36px;background-size:100% 100%;vertical-align: middle;margin-right:4px;margin-top:-8px;}
+.h2White:before{background-image: url(https://apc-housing.co.jp/wordpress/wp-content/uploads/2025/06/icoTreeWH.svg);}
+.h2Blue:before{background-image: url(https://apc-housing.co.jp/wordpress/wp-content/uploads/2025/06/icoTreeBL.svg);}
+h3{
+	padding-bottom:8px;
+	color:#755248;
+	border-bottom:#755248 solid 1px;
+}
+
+h1,h3,.site-branding .site-title{font-family :'M PLUS 1p','sans-serif',serif;}
+
+/*	h title end	*/
+
+/*
+	link
+*/
+
+a:hover,.footSitemapBlock a{color:#556dac;}
+a:hover{color:#556dac;}
+
+/*	link end	*/
+
+/*
+	page Top
+*/
+.page_top_btn{
+	background-image:url(https://apc-housing.co.jp/wordpress/wp-content/uploads/2025/06/icoTreeBL.svg);background-color:#fff;color:#fff;border:1px solid #556dac;
+	box-shadow:none;
+}
+.page_top_btn:hover{background-color:#556dac;color:#556dac;background-image:url(https://apc-housing.co.jp/wordpress/wp-content/uploads/2025/06/icoTreeBL.svg);}
+
+/*
+	header.php
+*/
+.headContactBlock{padding-left:24px;padding-right:24px;padding-bottom:8px;}
+
+.headContactUl{
+	display:-webkit-flex;display:-moz-flex;	display:-ms-flex;display:-o-flex;display:flex;
+	flex-wrap:wrap;justify-content:space-between;
+	font-weight:bold;font-family:'M PLUS 1p','sans-serif',serif;
+}
+
+.headLeftUl{
+	margin-top:4px;
+	display:-webkit-flex;display:-moz-flex;	display:-ms-flex;display:-o-flex;display:flex;
+	flex-wrap:wrap;justify-content:space-between;
+}
+.headLeftUl li{margin-right:24px;}
+
+.headContactBlock .material-icons{font-size: 24px;margin-right: 4px;}
+.headTitleTxt{color: #755248;font-size:150%;font-weight:bold;font-family:'M PLUS 1p','sans-serif',serif;}
+.headTitleTxt:before{
+	content: '';display: inline-block;vertical-align: middle;
+	margin-right:4px;margin-top:-8px;
+	width:64px;height:64px;
+	background-image: url(https://apc-housing.co.jp/wordpress/wp-content/uploads/2025/06/APCH_logo_mark.jpg);background-size:100% 100%;
+}
+
+.headRightUl{
+	display:-webkit-flex;display:-moz-flex;	display:-ms-flex;display:-o-flex;display:flex;
+	align-items: center;
+	flex-wrap:wrap;justify-content:space-between;
+	margin-top:16px;
+	font-size:120%;
+/*display:grid;align-content:center;*/
+}
+.headRightUl li{margin-left:24px;}
+.headEmailTxt:before{
+	content:'';display: inline-block;vertical-align: middle;
+	margin-right:4px;margin-top:-8px;
+	width:28px;height:28px;
+	background-image: url(https://apc-housing.co.jp/wordpress/wp-content/uploads/2025/06/icoMail.svg);background-size:100% 100%;
+}
+
+/*	header.php end	*/
+
+/*
+	footer.php
+*/
+
+.footMaimBlock{background-color:#755248;color:#fff;}
+.footMaimBlock h3{border-bottom:#755248 solid 1px;padding-bottom:8px;text-align:center;}
+
+.footColumnUl{
+	margin:32px;
+	display:-webkit-flex;display:-moz-flex;	display:-ms-flex;display:-o-flex;display:flex;
+	flex-wrap:wrap;justify-content:space-between;
+}
+/*.footColumnUl li{width:33%;}*/
+.footMaimBlock a{color:#fff;}
+.footMaimBlock .material-icons{font-size:14px;margin-right: 4px;}
+
+.footSitemapBlock{padding:20px;background-color:#fff;color:#755248;}
+.footSitemapBlock h3,.footSitemapBlock a{color:#755248;}
+.footSitemapUl{
+	display:-webkit-flex;display:-moz-flex;	display:-ms-flex;display:-o-flex;display:flex;
+	flex-wrap:wrap;justify-content:space-around;
+}
+
+.footLogoImg{width:100px;}
+
+/*	footer.php end	*/
+
+/*----------------------*/
+/*	レスポンシブ	*/
+/*----------------------*/
+/*↓↓Mobile↓↓*/
+@media screen and (max-width:640px) {
+	.pcOn,{ display: none; }
+	.mobileOn{display: block;}
+
+	.flex_column{display:block;}
+	.contentInnerBlock{width:100%;}
+	.w60,
+	.w40,
+	.w70,
+	.w30,
+	.w80,
+	.w20,
+	.w50{width:100%;margin-bottom:16px;}
+	.shortWitdth,
+	.contentInnerBlock,
+	.contentInnerBlock2,
+	.shortWitdth,
+	.shortWitdth2
+	{margin-left:0px;margin-right:0px;}
+
+	/*headr*/
+	.headRightUl{margin-top:0px;justify-content:right;}
+
+
+}

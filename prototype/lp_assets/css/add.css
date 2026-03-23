@@ -254,3 +254,27 @@
 .thanks-page footer {
   margin-top: auto;
 }
+
+
+/* ハンバーガーボタン非表示 */
+/* .navbar-toggler {
+  display: none !important;
+}
+
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto !important;
+  height: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.collapse {
+  display: flex !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: flex !important;
+  }
+} */

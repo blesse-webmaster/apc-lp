@@ -219,3 +219,38 @@
 .header-nav {
   top: 0px;
 }
+
+
+
+
+
+.thanks-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.thanks-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0C7CB6;
+  margin-bottom: 15px;
+}
+
+.thanks-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.thanks-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.thanks-page footer {
+  margin-top: auto;
+}

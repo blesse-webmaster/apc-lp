@@ -52,6 +52,8 @@ if ($mode === 'send_mail') {
     $admin_body .= "\n\n送信日時: " . current_time('Y-m-d H:i:s');
 
     // SMTP 経由でメールを送信する設定
+    $mail->isMail();                              // SMTP を使用しない（PHP の mail() 関数を使用）
+    /*
     $mail->isSMTP();                              // SMTP を使用
     $mail->Host       = $mail_host;       // SMTP サーバーのホスト名
     $mail->SMTPAuth   = true;                     // SMTP 認証を有効化
@@ -59,6 +61,7 @@ if ($mode === 'send_mail') {
     $mail->Password   = $mail_password;     // SMTP パスワード
     $mail->SMTPSecure = $mail_secure;                    // 暗号化方式（tls または ssl）
     $mail->Port       = $mail_port;                      // 使用するポート（通常 587）
+    */
 
     // 文字化け対策: PHPMailer に文字コードと適切なエンコーディングを明示
     $mail->CharSet  = 'UTF-8';

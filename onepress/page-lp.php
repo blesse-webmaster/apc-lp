@@ -20,16 +20,18 @@ $fields = [
 ];
 
 //確認画面 1=確認画面あり 0=確認画面なし
-$confirm = 0;
+$confirm = get_option('blsform_confirm_screen');
+if(empty($confirm)) $confirm = 0;
 
 //フォーム名
 $form_name = "お問い合わせフォーム";
 
 //管理者のメールアドレス（送信先）
-$admin_mail = "info@bless-e.com";
+//$admin_mail = "admin@apc-housing.co.jp";
+$admin_mail = 'cs-team@wiepro.jp';
 
 //送信元（差出人）メールアドレス（ドメインで利用しているメール）
-$from = "admin@apc-housing.co.jp";
+$from = "sendai@apc-housing.co.jp";
 
 //送信元（差出人）名
 $from_name = "APCハウジング株式会社";

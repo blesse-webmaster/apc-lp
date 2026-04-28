@@ -5,6 +5,25 @@ global $wpdb;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// * get_option キー一覧
+$blsform_formname = get_option('blsform_formname');
+$blsform_domain = get_option('blsform_domain');
+$blsform_from_email = get_option('blsform_from_email');
+$blsform_from_name = get_option('blsform_from_name');
+$blsform_completion_page_url = get_option('blsform_completion_page_url');
+$blsform_confirm_screen = get_option('blsform_confirm_screen');
+$blsform_admin_email = get_option('blsform_admin_email');
+$blsform_admin_email_subject = get_option('blsform_admin_email_subject');
+$blsform_admin_email_body = get_option('blsform_admin_email_body');
+$blsform_user_email_subject = get_option('blsform_user_email_subject');
+$blsform_user_email_body = get_option('blsform_user_email_body');
+$blsform_user_email_footer = get_option('blsform_user_email_footer');
+$blsform_server_host = get_option('blsform_server_host');
+$blsform_server_user = get_option('blsform_server_user');
+$blsform_server_password = get_option('blsform_server_password');
+$blsform_server_encryption = get_option('blsform_server_encryption');
+$blsform_server_port = get_option('blsform_server_port');
+
 // キャッシュ制御ヘッダーを送信して、ブラウザにキャッシュさせないようにする
 header("Cache-Control: no-cache, no-store, must-revalidate");
 header("Pragma: no-cache");
@@ -34,33 +53,33 @@ if ($mode === 'send_mail') {
 
     if (isset($_POST['mode'])) :
         foreach ($fields as $key => $value):
-            $remail_text = str_replace('{{' . $key . '}}', esc_attr($_POST[$key]), $remail_text);
+            $blsform_user_email_body = str_replace('{{' . $key . '}}', esc_attr($_POST[$key]), $blsform_user_email_body);
         endforeach;
     endif;
 
-    $message = $remail_text;
+    $message = $blsform_user_email_body;
     //    $message .= $body;
-    $message .= $mailSignature;
+    $message .= "\n\n".$blsform_user_email_footer;
     $message .= "\n\n送信日時: " . current_time('Y-m-d H:i:s');
 
     if (isset($_POST['mode'])) :
         foreach ($fields as $key => $value):
-            $admin_body = str_replace('{{' . $key . '}}', esc_attr($_POST[$key]), $admin_body);
+            $blsform_admin_email_body = str_replace('{{' . $key . '}}', esc_attr($_POST[$key]), $blsform_admin_email_body);
         endforeach;
     endif;
-    $admin_body .= $mailSignature;
-    $admin_body .= "\n\n送信日時: " . current_time('Y-m-d H:i:s');
+    $blsform_admin_email_body .= "\n\n".$blsform_user_email_footer;
+    $blsform_admin_email_body .= "\n\n送信日時: " . current_time('Y-m-d H:i:s');
 
     // SMTP 経由でメールを送信する設定
     $mail->isMail();                              // SMTP を使用しない（PHP の mail() 関数を使用）
     /*
     $mail->isSMTP();                              // SMTP を使用
-    $mail->Host       = $mail_host;       // SMTP サーバーのホスト名
+    $mail->Host       = $blsform_server_host;       // SMTP サーバーのホスト名
     $mail->SMTPAuth   = true;                     // SMTP 認証を有効化
-    $mail->Username   = $mail_username;     // SMTP ユーザー名
-    $mail->Password   = $mail_password;     // SMTP パスワード
-    $mail->SMTPSecure = $mail_secure;                    // 暗号化方式（tls または ssl）
-    $mail->Port       = $mail_port;                      // 使用するポート（通常 587）
+    $mail->Username   = $blsform_server_user;     // SMTP ユーザー名
+    $mail->Password   = $blsform_server_password;     // SMTP パスワード
+    $mail->SMTPSecure = $blsform_server_encryption;                    // 暗号化方式（tls または ssl）
+    $mail->Port       = $blsform_server_port;                      // 使用するポート（通常 587）
     */
 
     // 文字化け対策: PHPMailer に文字コードと適切なエンコーディングを明示
@@ -71,26 +90,26 @@ if ($mode === 'send_mail') {
     try {
 
         // 送信者情報を設定
-        $mail->setFrom($from, $from_name);
+        $mail->setFrom($blsform_from_email, $blsform_from_name);
 
         // 宛先アドレスを追加
-        $mail->addAddress($admin_mail);
+        $mail->addAddress($blsform_admin_email);
 
         // 件名と本文を設定
-        $mail->Subject = $subject_admin;
-        $mail->Body    = $admin_body;
+        $mail->Subject = $blsform_admin_email_subject;
+        $mail->Body    = $blsform_admin_email_body;
 
         // 管理者へメール送信を実行
         $mail->send();
 
         $table = $wpdb->prefix . 'bls_form_logs';
         $data = [
-            'form' => $form_name,
+            'form' => $blsform_formname,
             'mail_date' => current_time('mysql'),
             'mail_date_gmt' => current_time('mysql', 1),
-            'mail_body' => $admin_body,
-            'mail_subject' => $subject_admin,
-            'to_email' => $admin_mail
+            'mail_body' => $blsform_admin_email_body,
+            'mail_subject' => $blsform_admin_email_subject,
+            'to_email' => $blsform_admin_email
         ];
         $format = ['%s', '%s', '%s', '%s', '%s'];
         $wpdb->insert($table, $data, $format);
@@ -98,21 +117,21 @@ if ($mode === 'send_mail') {
         // ユーザーへメール送信を実行
         $mail->clearAddresses(); // 既存の宛先をクリア
         $mail->addAddress($_POST['メールアドレス']); // ユーザーのメールアドレスを宛先に追加
-        $mail->Subject = $subject; // ユーザー宛の件名を設定
+        $mail->Subject = $blsform_user_email_subject; // ユーザー宛の件名を設定
         $mail->Body = $message; // ユーザー宛の本文を設定
         $mail->send();
 
         $data = [
-            'form' => $form_name,
+            'form' => $blsform_formname,
             'mail_date' => current_time('mysql'),
             'mail_date_gmt' => current_time('mysql', 1),
             'mail_body' => $message,
-            'mail_subject' => $subject,
+            'mail_subject' => $blsform_user_email_subject,
             'to_email' => $_POST['メールアドレス']
         ];
         $wpdb->insert($table, $data, $format);
 
-        header('Location: ' . $thanksPage);
+        header('Location: ' . $blsform_completion_page_url);
         exit;
     } catch (Exception $e) {
         // エラーハンドリング
@@ -148,7 +167,7 @@ if (!empty($validation_errors)) {
 } elseif ($mode === 'input_form') {
     $view = 'input';
     //    echo 2;
-} elseif ($mode === 'confirm_form' && $confirm === 1) {
+} elseif ($mode === 'confirm_form' && $blsform_confirm_screen === 1) {
     $view = 'confirm';
     //    echo 3;
 } else {

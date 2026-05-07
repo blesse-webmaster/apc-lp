@@ -155,13 +155,6 @@ require_once get_theme_file_path() . '/form-function.php';
             <nav class="navbar navbar-expand-lg navbar-light py-0">
                 <div class="container-fluid" style="--bs-gutter-x: 0;">
                     <div class="w-100">
-<!--
-                        <div class="text-end">
-                            <button class="btn-hamburger navbar-toggler border-0 rounded-0 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="btn-hamburger-icon navbar-toggler-icon"></span>
-                            </button>
-                        </div>
--->
                         <div class="collapse navbar-collapse justify-content-between align-items-center pt-3 pb-2 mx-3 mx-xxl-5 px-2 " id="navbarNavDropdown">
                             <a class="nav-link fw-bold fs-6 py-2 text-black d-none d-lg-block text-shadow_white site_name" aria-current="page" href="/">
                                 <picture>
